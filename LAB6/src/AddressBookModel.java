@@ -19,16 +19,13 @@ public class AddressBookModel extends Observable {
 		setChanged();
 		notifyObservers();
 		}
-		
 	}
-	
 	public void removeBuddy(int i){
 		if (i>=0 && i<buddyList.size()){
 			buddyList.remove(i);
 			
 			setChanged();
-			notifyObservers();
-			 
+			notifyObservers();	 
 		}
 	}
 	
