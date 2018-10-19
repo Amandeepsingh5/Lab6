@@ -14,7 +14,7 @@ public class AddressBookModel extends Observable {
 	}
 	
 	public void addBuddy(BuddyInfo b){
-		if(b != null){
+		if( b!= null){
 		buddyList.addElement(b);
 		setChanged();
 		notifyObservers();
@@ -34,8 +34,7 @@ public class AddressBookModel extends Observable {
 		buddyList.getElementAt(i).setAddress(address);
 		buddyList.getElementAt(i).setNumber(number);
 		buddyList.getElementAt(i).setAge(age);
-		
-		
+
 		setChanged();
 		notifyObservers();
 	}
@@ -44,11 +43,9 @@ public class AddressBookModel extends Observable {
 		return buddyList;
 	}
 	
-	
 	public BuddyInfo getBuddyAt(int index){
 		return buddyList.getElementAt(index);
 	}
-	
 	public int size(){
 		return buddyList.size();
 	}
